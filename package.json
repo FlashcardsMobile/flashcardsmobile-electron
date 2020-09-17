@@ -1,0 +1,30 @@
+{
+  "name": "flashcardsmobile",
+  "description": "The Flashcards Mobile desktop app.",
+  "author": {
+    "email": "admin@flashcardsmobile.com",
+    "name": "Flashcards Mobile dev team",
+    "url": "https://flashcardsmobile.com"
+  },
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1"
+  },
+  "build": {
+    "appId": "com.flashcardsmobile.desktopapp",
+    "productName": "Flashcards Mobile",
+    "mac": {
+      "category": "public.app-category.education"
+    },
+    "icon": "./favicon.png"
+  }
+}
