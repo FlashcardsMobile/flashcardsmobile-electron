@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+     - image: circleci/node:11
+    steps:
+     - checkout
+     - restore_cache:
+         key: dependency-cache-{{ checksum "package.json" }}
+     - run:
+         name: Install Dependencies
+         command: npm install
+     - save_cache:
+         key: dependency-cache-{{ checksum "package.json" }}
+         paths:
+          - ./node_modules
+     - run:
+         name: Generate Builds
+         command: npm run dist
+     - store_artifacts:
+         path: ~/repo/dist
