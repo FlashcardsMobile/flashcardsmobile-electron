@@ -30,5 +30,9 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/upload-artifact@v2
       with:
-        name: Linux build
-        path: dist/*
+        name: Snap
+        path: dist/*.snap
+    - uses: actions/upload-artifact@v2
+      with:
+        name: AppImage
+        path: dist/*.AppImage
