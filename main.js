@@ -21,9 +21,13 @@ const createWindow = () => {
     const view = new BrowserView()
 
     win.setBrowserView(view)
-    view.setBounds({ x: 0, y: 0, width: width, height: height})
-    view.setAutoResize({ width: true, height: true, horizontal: true, vertical: true})
+    view.setBounds({ x: 0, y: 0, width: width, height: height })
+    view.setAutoResize({ width: true, height: true, horizontal: true, vertical: true })
     view.webContents.loadURL('https://flashcardsmobile.com')
 }
+
+app.on('window-all-closed', () => {
+    app.quit()
+})
 
 app.whenReady().then(createWindow)

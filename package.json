@@ -26,5 +26,6 @@
       "category": "public.app-category.education"
     },
     "icon": "./favicon.png"
-  }
+  },
+    "bin": "bin/run.js"
 }
