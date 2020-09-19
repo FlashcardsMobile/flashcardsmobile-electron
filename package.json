@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
