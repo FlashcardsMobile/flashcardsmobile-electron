@@ -28,11 +28,3 @@ jobs:
     - run: yarn dist
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/upload-artifact@v2
-      with:
-        name: Snap
-        path: dist/*.snap
-    - uses: actions/upload-artifact@v2
-      with:
-        name: AppImage
-        path: dist/*.AppImage
